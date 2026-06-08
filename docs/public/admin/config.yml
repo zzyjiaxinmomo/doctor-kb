@@ -1,0 +1,38 @@
+backend:
+  name: gitlab
+  repo: your-org/doctor-kb
+  branch: main
+  auth_type: pkce
+  app_id: ""
+
+media_folder: docs/public/images
+public_folder: /images
+
+locale: zh_Hans
+
+collections:
+  - name: guide
+    label: 使用指南
+    folder: docs/guide
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    fields:
+      - { label: 标题, name: title, widget: string }
+      - { label: 内容, name: body, widget: markdown }
+
+  - name: pages
+    label: 其他页面
+    files:
+      - label: 常见问题
+        name: faq
+        file: docs/faq.md
+        fields:
+          - { label: 标题, name: title, widget: string }
+          - { label: 内容, name: body, widget: markdown }
+
+      - label: 首页
+        name: home
+        file: docs/index.md
+        fields:
+          - { label: 内容, name: body, widget: markdown }

@@ -1,0 +1,17 @@
+{
+  "name": "doctor-kb",
+  "version": "1.0.0",
+  "description": "可丽尔医生端知识库",
+  "scripts": {
+    "dev": "vitepress dev docs",
+    "build": "vitepress build docs",
+    "preview": "vitepress preview docs"
+  },
+  "devDependencies": {
+    "vitepress": "^1.6.0",
+    "vue": "^3.5.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
