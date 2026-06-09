@@ -30,7 +30,8 @@ export default defineConfig({
   },
 
   themeConfig: {
-    logo: '/images/logo.png',
+    logo: undefined,
+    siteTitle: '可丽尔帮助中心',
 
     nav: [
       { text: '首页', link: '/' },
@@ -60,8 +61,8 @@ export default defineConfig({
     ],
 
     footer: {
-      message: '可丽尔医生端帮助中心',
-      copyright: 'Copyright © 2024-present 博恩云'
+      message: '',
+      copyright: '© Copyright 2020-2026 ©2017可丽尔医疗科技（常州）有限公司版权所有 <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">苏公网安备 32041202001648号</a> 苏ICP备16050379号'
     },
 
     docFooter: {

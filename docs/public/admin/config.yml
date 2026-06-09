@@ -1,9 +1,9 @@
 backend:
-  name: gitlab
-  repo: your-org/doctor-kb
+  name: github
+  repo: zzyjiaxinmomo/doctor-kb
   branch: main
   auth_type: pkce
-  app_id: ""
+  app_id: "Ov23liSnv5N9vjzgziRX"
 
 media_folder: docs/public/images
 public_folder: /images
@@ -19,6 +19,7 @@ collections:
     extension: md
     fields:
       - { label: 标题, name: title, widget: string }
+      - { label: 排序, name: order, widget: number, value_type: int, default: 0 }
       - { label: 内容, name: body, widget: markdown }
 
   - name: pages
