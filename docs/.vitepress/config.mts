@@ -21,6 +21,8 @@ export default defineConfig({
   title: '可丽尔帮助中心',
   description: '可丽尔医生端使用指南与知识库',
 
+  base: '/doctor-kb/',
+
   search: {
     provider: 'local'
   },

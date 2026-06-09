@@ -2,8 +2,6 @@ backend:
   name: github
   repo: zzyjiaxinmomo/doctor-kb
   branch: main
-  auth_type: pkce
-  app_id: "Ov23liSnv5N9vjzgziRX"
 
 media_folder: docs/public/images
 public_folder: /images
