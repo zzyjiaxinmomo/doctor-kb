@@ -37,7 +37,7 @@ export default defineConfig({
 
     nav: [
       { text: '首页', link: '/' },
-      { text: '使用指南', link: '/guide/case-management' },
+      { text: '使用指南', link: '/guide/login' },
       { text: '常见问题', link: '/faq' }
     ],
 
@@ -46,13 +46,13 @@ export default defineConfig({
         {
           text: '使用指南',
           items: [
+            { text: '系统登录', link: '/guide/login' },
+            { text: '工作台', link: '/guide/workbench' },
+            { text: '新建初诊病例', link: '/guide/new-case' },
             { text: '病例管理', link: '/guide/case-management' },
-            { text: 'AI报告', link: '/guide/ai-report' },
-            { text: '排产/发货申请', link: '/guide/delivery' },
-            { text: '临床服务', link: '/guide/clinical-service' },
-            { text: '初步方案', link: '/guide/preliminary' },
-            { text: '快速定位', link: '/guide/fast-target' },
-            { text: '患者管理', link: '/guide/patient' }
+            { text: '复诊监控', link: '/guide/follow-up' },
+            { text: '正畸学苑', link: '/guide/academy' },
+            { text: '个人中心', link: '/guide/profile' }
           ]
         }
       ]

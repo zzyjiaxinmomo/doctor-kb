@@ -23,7 +23,7 @@
                   ref="inputRef"
                   v-model="query"
                   type="text"
-                  placeholder="输入问题，如：怎么提交排产申请？"
+                  placeholder="输入问题，如：怎么新建初诊病例？"
                   @keydown.enter="handleSearch"
                 />
                 <button v-if="query" class="ai-search-clear" @click="query = ''">
@@ -59,7 +59,7 @@
                 <div v-for="(r, i) in results" :key="i" class="ai-search-result-item">
                   <div class="ai-search-result-title">{{ r.title }}</div>
                   <div class="ai-search-result-content">{{ r.content }}</div>
-                  <a v-if="r.link" :href="r.link" class="ai-search-result-link">查看详情 →</a>
+                  <a v-if="r.link" :href="withBase(r.link)" class="ai-search-result-link" @click="close">查看详情 →</a>
                 </div>
               </div>
 
@@ -80,6 +80,7 @@
 
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from 'vue'
+import { withBase } from 'vitepress'
 
 const visible = ref(false)
 const query = ref('')
@@ -89,10 +90,10 @@ const inputRef = ref<HTMLInputElement>()
 const results = ref<{ title: string; content: string; link?: string }[]>([])
 
 const suggestions = [
-  '怎么创建病例？',
-  'AI报告怎么查看？',
-  '排产申请流程是什么？',
-  '患者管理有哪些功能？'
+  '系统怎么登录？',
+  '如何新建初诊病例？',
+  '复诊监控怎么用？',
+  '病例怎么管理？'
 ]
 
 function open() {
@@ -114,9 +115,9 @@ async function handleSearch() {
   await new Promise(r => setTimeout(r, 1000))
   results.value = [
     {
-      title: '模拟结果 - 病例管理',
+      title: '模拟结果 - 新建初诊病例',
       content: '这里是 AI 搜索结果的占位内容。接入后端后，将显示真实的 RAG 检索结果。',
-      link: '/guide/case-management'
+      link: '/guide/new-case'
     }
   ]
 
