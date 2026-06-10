@@ -26,9 +26,9 @@
 
 如当前病例已矫治完成，或因其他情况需要暂时中止矫治进度，您可点击<span style="color:#4472c4"><strong>病例操作</strong></span>进行处理
 
-![](/images/guide/p30-a861b6d6bb.png)
 
-<span style="color:#4472c4"><strong>矫治器记录发放</strong></span>
+### <span style="color:#4472c4"><strong>矫治器记录发放</strong></span>
+![](/images/guide/p30-a861b6d6bb.png)
 
 当您接收到可丽尔工厂邮寄给您的矫治器后，
 
@@ -40,9 +40,9 @@
 
 此项非必须填写项，您可按需使用。
 
-![](/images/guide/p30-caffbef60a.png)
 
-<span style="color:#4472c4"><strong>提交后续加工申请</strong></span>
+### <span style="color:#4472c4"><strong>提交后续加工申请</strong></span>
+![](/images/guide/p30-caffbef60a.png)
 
 您可通过此功能，提交病例的下一阶段矫治器加工申请。
 
@@ -54,7 +54,7 @@
 
 可丽尔工厂将进行下一阶段矫治器生产加工。
 
-<span style="color:#4472c4"><strong>完成病例</strong></span>
+### <span style="color:#4472c4"><strong>完成病例</strong></span>
 
 ![](/images/guide/p34-f415f70b77.png)
 
@@ -68,7 +68,7 @@
 
 ![](/images/guide/p34-8b3a0025f0.png)
 
-<span style="color:#4472c4"><strong>重启病例</strong></span>
+### <span style="color:#4472c4"><strong>重启病例</strong></span>
 
 病例状态为<span style="color:#4472c4">已完成</span>或者<span style="color:#4472c4">已中止</span>时，依据矫治进度安排，您可选择<span style="color:#4472c4"><strong>病例重启</strong></span>，病例重新启动后，
 
@@ -82,7 +82,7 @@
 
 ![](/images/guide/p35-9460e9f6ee.png)
 
-<span style="color:#4472c4"><strong>申请发保持器</strong></span>
+### <span style="color:#4472c4"><strong>申请发保持器</strong></span>
 
 病例状态为<span style="color:#4472c4">已完成</span>时，如需要病例需要保持器，您可在系统内<span style="color:#4472c4">提交保持器申请</span>。
 

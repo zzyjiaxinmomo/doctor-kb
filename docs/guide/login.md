@@ -18,7 +18,7 @@
 
 官方下载地址：
 
-#### https://www.google.cn/intl/zh-CN/chrome/
+### https://www.google.cn/intl/zh-CN/chrome/
 
 ![](/images/guide/p04-4c5594f539.png)
 

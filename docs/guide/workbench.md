@@ -1,5 +1,7 @@
 # 工作台
 
+### <span style="color:#4472c4"><strong>资质认证</strong></span>
+
 如您还未提交资质认证，登录后会为您展示可丽尔病例操作流程。
 
 您可点击<span style="color:#4472c4"><strong>立即认证</strong></span>，完成资质认证。资质认证后，您可创建管理您的病例。
@@ -18,49 +20,50 @@
 
 如您已完成资质认证，您可通过<span style="color:#4472c4">工作台</span>实现以下操作：
 
+
+### 1、通过病例姓名、病例号快捷<span style="color:#4472c4">搜索病例</span>。
+
+### 2、一键<span style="color:#4472c4">切换</span>您的执业机构。
 ![](/images/guide/p08-22f0fb11f6.png)
 
-1、通过病例姓名、病例号快捷<span style="color:#4472c4">搜索病例</span>。
 
-2、一键<span style="color:#4472c4">切换</span>您的执业机构。
-
-3、查看<span style="color:#4472c4">站内信通知</span>。
+### 3、查看<span style="color:#4472c4">站内信通知</span>。
 
 ![](/images/guide/p08-3b1069e2f8.png)
 
+
+### 4、点击头像可进入<span style="color:#4472c4">个人中心、修改密码</span>。
 ![](/images/guide/p08-6be4d3cf61.png)
 
-4、点击头像可进入<span style="color:#4472c4">个人中心、修改密码</span>。
+### 5、下载治疗同意书（成人/儿童）。
 
-5、下载治疗同意书（成人/儿童）。
+### 6、下载ClearCheck 软件安装包。
 
-6、下载ClearCheck 软件安装包。
+### 7、下载app。
 
-7、下载app。
-
+### 8、快捷查看当前<span style="color:#4472c4">病例总量</span>。
 ![](/images/guide/p08-4d8f2287e3.png)
-
-8、快捷查看当前<span style="color:#4472c4">病例总量</span>。
 
 点击栏目即跳转对应病例列表。
 
+
+### 9、快捷<span style="color:#4472c4">预约顺丰快递</span>，邮寄实物模型。
 ![](/images/guide/p08-4197e394f3.png)
 
-9、快捷<span style="color:#4472c4">预约顺丰快递</span>，邮寄实物模型。
+### 10、下载<span style="color:#4472c4">帮助文档</span>。
 
-10、下载<span style="color:#4472c4">帮助文档</span>（本文档）。
 
-![](/images/guide/p08-7ca5ea5c20.png)
-
-11、快捷处理<span style="color:#4472c4">待审核治疗方案</span>
+### 11、快捷处理<span style="color:#4472c4">待审核治疗方案</span>
 
 所有需要您审核的方案都将展示在工作台。
 
-文字方案可直接处理。（见下页）
+文字方案可直接处理。
 
 动画方案将跳转ClearCheck 软件查看。
+![](/images/guide/p08-7ca5ea5c20.png)
 
-10、快捷处理<span style="color:#4472c4">待完善资料</span>
+
+### 10、快捷处理<span style="color:#4472c4">待完善资料</span>
 
 如您提交的病例资料或模型未通过质检。
 
@@ -70,7 +73,7 @@
 
 ![](/images/guide/p09-a08730c080.png)
 
-11、快捷处理<span style="color:#4472c4">矫治器通知</span>
+### 11、快捷处理<span style="color:#4472c4">矫治器通知</span>
 
 如您的病例阶段佩戴矫治器即将到期，系统将会为您展示这些病例。
 

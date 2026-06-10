@@ -28,27 +28,27 @@
 
 ![](/images/guide/p12-6d0b748433.png)
 
-<span style="color:#4472c4"><strong>面部照：</strong></span>
+#### <span style="color:#4472c4"><strong>面部照：</strong></span>
 
 侧面照、正面照、正面露齿微笑照、
 
 正面45 度照。
 
-<span style="color:#4472c4"><strong>口腔内照片：</strong></span>
+#### <span style="color:#4472c4"><strong>口腔内照片：</strong></span>
 
 上牙弓、覆盖照、下牙弓、右面咬合、
 
 正面咬合、左面咬合。
 
-<span style="color:#4472c4"><strong>影像资料：</strong></span>
+#### <span style="color:#4472c4"><strong>影像资料：</strong></span>
 
 全颌曲面断层片、头颅侧位定位片。
 
-<span style="color:#4472c4"><strong>其他图像资料：</strong></span>
+#### <span style="color:#4472c4"><strong>其他图像资料：</strong></span>
 
 本项非必须项，如您有其他照片资料需要补充，可在此处上传。
 
-<span style="color:#4472c4"><strong>其他视频资料：</strong></span>
+#### <span style="color:#4472c4"><strong>其他视频资料：</strong></span>
 
 本项非必须项，如您有其他照片资料需要补充，可在此处上传。
 
@@ -58,11 +58,11 @@
 
 已上传的图片，支持：上下翻转、左右翻转、裁剪、向左旋转、向右旋转。
 
-### <span style="color:#4472c4"><strong>照片拍摄标准</strong></span>
+#### <span style="color:#4472c4"><strong>照片拍摄标准</strong></span>
 
 为了向您提供最准确的病例矫正治疗方案，请您按以下标准提供病例相关照片资料。
 
-<span style="color:#4472c4"><strong>口腔摄影器材选择及拍摄数据设置：</strong></span>
+#### <span style="color:#4472c4"><strong>口腔摄影器材选择及拍摄数据设置：</strong></span>
 
 最佳为单反相机配合100mm 微距镜头，闪光灯使用外置环闪
 
@@ -70,9 +70,9 @@
 
 2、口内像拍摄相机设置：M 档、ISO100、1/125 秒、F25-32
 
-<span style="color:#4472c4"><strong>面部照</strong></span>
+#### <span style="color:#4472c4"><strong>面部照</strong></span>
 
-<span style="color:#4472c4"><strong>正面放松照及微笑照</strong></span>
+#### <span style="color:#4472c4"><strong>正面放松照及微笑照</strong></span>
 
 1、患者身体坐端，背部挺直，面部呈自然放松状态，两眼平视前方。
 
@@ -88,21 +88,21 @@
 
 整理发型，去除影响视觉的耳环首饰，暴露额头、双耳。
 
-<span style="color:#4472c4"><strong>侧面90 度照</strong></span>
+#### <span style="color:#4472c4"><strong>侧面90 度照</strong></span>
 
 1、自然头位，双眼直视前方，能看到对侧睫毛为最佳。
 
 2、牙齿自然咬合在牙尖交错位，唇自然放松。
 
-<span style="color:#4472c4"><strong>侧面45 度照</strong></span>
+#### <span style="color:#4472c4"><strong>侧面45 度照</strong></span>
 
 1、自然头位，双眼直视前方，鼻尖在对侧面颊部边缘以内为最佳。
 
 2、牙齿自然咬合在牙尖交错位，唇自然放松。
 
-<span style="color:#4472c4"><strong>口内照</strong></span>
+#### <span style="color:#4472c4"><strong>口内照</strong></span>
 
-<span style="color:#4472c4"><strong>口内正面像</strong></span>
+#### <span style="color:#4472c4"><strong>口内正面像</strong></span>
 
 1、口角拉钩手柄中央的位置与咬合平面位于一条直线上，让拉钩在画面的四角上均等。
 
@@ -112,7 +112,7 @@
 
 4、使左右颊粘膜间隙均等。
 
-<span style="color:#4472c4"><strong>口内左（右）侧位照</strong></span>
+#### <span style="color:#4472c4"><strong>口内左（右）侧位照</strong></span>
 
 1、口角拉钩左右手柄中心与咬合平面在一条线上。
 
@@ -122,7 +122,7 @@
 
 4、患者尖牙位置放置在图像中央等，从正中到左右的牙齿数相等。
 
-<span style="color:#4472c4"><strong>上（下）颌咬合面照</strong></span>
+#### <span style="color:#4472c4"><strong>上（下）颌咬合面照</strong></span>
 
 1、反光镜离开最后磨牙，不要接触。
 
@@ -188,7 +188,7 @@
 
 ### 7. <span style="color:#4472c4"><strong>病例模型上传/邮寄</strong></span>
 
-<span style="color:#4472c4"><strong>数字模型</strong></span>
+#### <span style="color:#4472c4"><strong>数字模型</strong></span>
 
 如您为当前病例采集的数字口扫模型，您需要将相关数字模型文件进行上传。
 
@@ -200,7 +200,7 @@
 
 ![](/images/guide/p18-cb213fd499.png)
 
-<span style="color:#4472c4"><strong>隐形矫治口扫模型合格标准</strong></span>
+#### <span style="color:#4472c4"><strong>隐形矫治口扫模型合格标准</strong></span>
 
 1、牙冠形态扫描完整（近中、远中、颌面、唇侧、颊侧、舌侧）。
 
@@ -218,7 +218,7 @@
 
 <small>上颌13 牙齿缺损</small>
 
-<span style="color:#4472c4"><strong>实物模型</strong></span>
+#### <span style="color:#4472c4"><strong>实物模型</strong></span>
 
 如您为当前病例采集的<span style="color:#4472c4">实物模型（硅胶或石膏）</span>，您需要将实物模型邮寄至可丽尔中心。
 
@@ -246,9 +246,9 @@
 
 ![](/images/guide/p20-6e3c5fa309.png)
 
-<span style="color:#4472c4"><strong>实物模型（硅胶或石膏）取模标准及步骤说明</strong></span>
+#### <span style="color:#4472c4"><strong>实物模型（硅胶或石膏）取模标准及步骤说明</strong></span>
 
-<span style="color:#4472c4"><strong>合格硅橡胶重要性说明</strong></span>
+#### <span style="color:#4472c4"><strong>合格硅橡胶重要性说明</strong></span>
 
 对于我司隐形矫治器非常重要的生产基础工作，就是医生给我司提供合格的患者全口模型，只有取得
 
@@ -262,7 +262,7 @@
 
 矫治周期延长。降低患者矫治成功信心。
 
-<span style="color:#4472c4"><strong>隐形矫治硅橡胶印模合格标准</strong></span>
+#### <span style="color:#4472c4"><strong>隐形矫治硅橡胶印模合格标准</strong></span>
 
 1、<span style="color:#4472c4">牙冠完整清晰</span>：所有牙体形态完整、无形变、无过大气泡、褶皱、分层等。
 
@@ -332,7 +332,7 @@
 
 <small>患者口内照片的牙冠大小不一致，因此取模失败。</small>
 
-<span style="color:#4472c4"><strong>隐形矫治石膏模型合格标准</strong></span>
+#### <span style="color:#4472c4"><strong>隐形矫治石膏模型合格标准</strong></span>
 
 1、<span style="color:#4472c4">牙冠完整清晰：</span>
 
@@ -384,7 +384,7 @@
 
 <small>不合格模型</small>
 
-<span style="color:#4472c4"><strong>几种特殊情况印模的取制</strong></span>
+#### <span style="color:#4472c4"><strong>几种特殊情况印模的取制</strong></span>
 
 1、对于牙周炎导致临床冠较长的患者，建议填倒凹后，再取硅橡胶模型。
 
@@ -392,7 +392,7 @@
 
 3、第三磨牙萌出且建立正常咬合，不需拔出智齿，硅橡胶模型至少应确保至第三磨牙近中1/2 以上。
 
-<span style="color:#4472c4"><strong>重取操作说明</strong></span>
+#### <span style="color:#4472c4"><strong>重取操作说明</strong></span>
 
 1、对于如上不合格模型，请尽快重取，并邮寄，我们将尽快处理，避免矫治计划的延误或反弹。
 
@@ -400,15 +400,15 @@
 
 3、若操作中存在需要沟通项目，请直接联系客服人员。
 
-<span style="color:#4472c4"><strong>3Shape</strong></span>
+### <span style="color:#4472c4"><strong>3Shape</strong></span>
 
 如您使用的是3Shape 三维扫描仪，您可通过3Shape 传输模型文件。
 
 ![](/images/guide/p26-036b0e8061.png)
 
-<span style="color:#4472c4"><strong>3shape</strong></span><span style="color:#4472c4"><strong> </strong></span><span style="color:#4472c4"><strong>账号对接说明</strong></span>
+#### <span style="color:#4472c4"><strong>3shape</strong></span><span style="color:#4472c4"><strong> </strong></span><span style="color:#4472c4"><strong>账号对接说明</strong></span>
 
-<span style="color:#4472c4"><strong>登录3shape</strong></span>
+#### <span style="color:#4472c4"><strong>登录3shape</strong></span>
 
 1、3shape 官网登录链接：https://portal.3shapecommunicate.com/#/login
 
@@ -416,7 +416,7 @@
 
 ![](/images/guide/p26-8c6731b4aa.png)
 
-<span style="color:#4472c4"><strong>连接可丽尔博士技工所</strong></span>
+#### <span style="color:#4472c4"><strong>连接可丽尔博士技工所</strong></span>
 
 1、进入账号后如上图所示，点击“connections”下有个蓝色的“Add Connection”。
 
@@ -426,7 +426,7 @@
 
 ![](/images/guide/p27-4d76fd00ef.png)
 
-<span style="color:#4472c4"><strong>等待验证通过即可进行文件传输</strong></span>
+#### <span style="color:#4472c4"><strong>等待验证通过即可进行文件传输</strong></span>
 
 1、需要可丽尔博士工作人员验证，并点击邀请链接进行通过。
 

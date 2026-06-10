@@ -18,9 +18,9 @@
 
 ![](/images/guide/p31-da6a008ffd.png)
 
-![](/images/guide/p32-cc61fc8e07.png)
 
 ### <span style="color:#4472c4"><strong>添加复诊记录</strong></span>
+![](/images/guide/p32-cc61fc8e07.png)
 
 在矫治器佩戴过程中，病例进行线下复诊时，
 
