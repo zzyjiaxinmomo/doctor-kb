@@ -156,6 +156,12 @@
   margin-bottom: 24px;
 }
 
+/* 锚点跳转时给标题上方留出空间。VitePress 的"页面导航"（右侧 outline）
+   会贴在视口顶部，覆盖标题，所以预留 120px 让标题在导航下方。 */
+.VPContent :where(h2, h3, h4, h5, h6) {
+  scroll-margin-top: 120px;
+}
+
 .custom-block.tip {
   border-color: var(--vp-c-brand-1);
   background: rgba(22, 113, 218, 0.08);
@@ -435,6 +441,159 @@
   padding: 40px 0;
   color: var(--vp-c-text-3);
   font-size: 14px;
+}
+
+.ai-search-retry {
+  margin-top: 12px;
+  padding: 6px 20px;
+  border-radius: 20px;
+  border: 1px solid var(--vp-c-brand-1);
+  background: var(--vp-c-brand-soft);
+  color: var(--vp-c-brand-1);
+  font-size: 13px;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.25s;
+}
+
+.ai-search-retry:hover {
+  background: var(--vp-c-brand-1);
+  color: #fff;
+}
+
+/* AI 摘要卡片 */
+.ai-search-summary {
+  padding: 16px;
+  margin-bottom: 16px;
+  border-radius: 12px;
+  background: var(--vp-c-brand-soft);
+  border: 1px solid var(--vp-c-brand-2);
+}
+
+.ai-search-summary-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--vp-c-brand-1);
+}
+
+.ai-search-summary-text {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--vp-c-text-1);
+  white-space: pre-wrap;
+}
+
+/* 摘要来源链接 */
+.ai-search-summary-sources {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 8px;
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px dashed var(--vp-c-brand-2);
+}
+
+.ai-search-summary-sources-label {
+  font-size: 12px;
+  color: var(--vp-c-text-3);
+}
+
+.ai-search-summary-source {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  color: var(--vp-c-brand-1);
+  background: var(--vp-c-bg);
+  border: 1px solid var(--vp-c-brand-2);
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ai-search-summary-source:hover {
+  background: var(--vp-c-brand-1);
+  color: #fff;
+}
+
+/* 摘要生成中：脉冲圆点 */
+.ai-search-summary-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--vp-c-brand-1);
+  animation: ai-dot-pulse 1.2s ease-in-out infinite;
+}
+
+@keyframes ai-dot-pulse {
+  0%, 100% { opacity: 0.3; transform: scale(0.8); }
+  50% { opacity: 1; transform: scale(1.2); }
+}
+
+/* 骨架屏（摘要加载占位） */
+.ai-search-skeleton {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.ai-search-skeleton-line {
+  height: 12px;
+  border-radius: 6px;
+  background: linear-gradient(
+    90deg,
+    var(--vp-c-default-soft) 25%,
+    var(--vp-c-brand-soft) 50%,
+    var(--vp-c-default-soft) 75%
+  );
+  background-size: 200% 100%;
+  animation: ai-shimmer 1.5s ease-in-out infinite;
+}
+
+@keyframes ai-shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+.ai-search-summary--error {
+  border-color: var(--clr-warning);
+  background: rgba(245, 158, 11, 0.08);
+}
+
+.ai-search-summary--error .ai-search-summary-label {
+  color: var(--clr-warning);
+}
+
+/* 分隔线：AI 回答 / 相关文档 */
+.ai-search-divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 4px 0 16px;
+}
+
+.ai-search-divider::before,
+.ai-search-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--vp-c-default-2);
+}
+
+.ai-search-divider span {
+  font-size: 12px;
+  color: var(--vp-c-text-3);
+  white-space: nowrap;
 }
 
 .ai-search-footer {
