@@ -30,7 +30,8 @@ export default defineConfig({
   },
 
   vite: {
-    plugins: [serveAdmin()]
+    plugins: [serveAdmin()],
+    envPrefix: ['VITE_', 'PUBLIC_']
   },
 
   themeConfig: {
