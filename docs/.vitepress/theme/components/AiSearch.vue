@@ -151,8 +151,8 @@ interface SearchResponse {
   results: SearchResult[]
 }
 
-// 后端地址：优先读 VITE_AI_API_BASE 环境变量，默认本地开发地址
-const API_BASE = import.meta.env.VITE_AI_API_BASE || 'http://localhost:8001'
+// 后端地址：生产环境 API
+const API_BASE = 'https://doctor-kb-server-production.up.railway.app/'
 
 const visible = ref(false)
 const query = ref('')

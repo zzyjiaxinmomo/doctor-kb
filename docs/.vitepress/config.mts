@@ -30,11 +30,7 @@ export default defineConfig({
   },
 
   vite: {
-    plugins: [serveAdmin()],
-    define: {
-      'import.meta.env.VITE_AI_API_BASE': JSON.stringify(process.env.VITE_AI_API_BASE || '')
-    },
-    envPrefix: ['VITE_', 'PUBLIC_']
+    plugins: [serveAdmin()]
   },
 
   themeConfig: {
