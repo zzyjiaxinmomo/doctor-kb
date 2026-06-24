@@ -152,7 +152,7 @@ interface SearchResponse {
 }
 
 // 后端地址：生产环境 API
-const API_BASE = 'https://doctor-kb-server-production.up.railway.app/'
+const API_BASE = 'https://doctor-kb-server-production.up.railway.app'
 
 const visible = ref(false)
 const query = ref('')
