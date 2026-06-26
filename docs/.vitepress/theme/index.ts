@@ -88,7 +88,7 @@ export default {
     router.onAfterRouteChange = (to: string) => {
       const hashIdx = to.indexOf('#')
       if (hashIdx >= 0) {
-        setTimeout(() => waitAndScroll(to.slice(hashIdx)), 50)
+        setTimeout(() => waitAndScroll(to.slice(hashIdx)), 100)
       }
     }
 

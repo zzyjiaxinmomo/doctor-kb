@@ -1,5 +1,5 @@
 <template>
-  <a href="/" class="nav-bar-logo">
+  <a href="/doctor-kb" class="nav-bar-logo">
     <img
       src="/images/brand/C-logo-01.png"
       alt="可丽尔"
