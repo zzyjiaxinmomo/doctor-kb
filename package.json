@@ -9,6 +9,8 @@
     "oauth": "node oauth-server/index.js"
   },
   "devDependencies": {
+    "@types/markdown-it": "^14.1.2",
+    "markdown-it": "^14.1.0",
     "vitepress": "^1.6.0",
     "vue": "^3.5.0"
   },

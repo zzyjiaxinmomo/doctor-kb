@@ -481,11 +481,77 @@
 }
 
 .ai-search-summary-text {
-  margin: 0;
   font-size: 14px;
   line-height: 1.7;
   color: var(--vp-c-text-1);
-  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+/* Markdown 渲染：摘要在紧凑卡片里，标题/间距统一收敛，避免大标题撑破布局 */
+.ai-search-summary-text :where(p, ul, ol, blockquote) {
+  margin: 0;
+}
+.ai-search-summary-text p {
+  margin: 0 0 8px;
+}
+.ai-search-summary-text p:last-child {
+  margin-bottom: 0;
+}
+.ai-search-summary-text h1,
+.ai-search-summary-text h2,
+.ai-search-summary-text h3,
+.ai-search-summary-text h4,
+.ai-search-summary-text h5,
+.ai-search-summary-text h6 {
+  margin: 12px 0 6px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: var(--vp-c-text-1);
+}
+.ai-search-summary-text h1:first-child,
+.ai-search-summary-text h2:first-child,
+.ai-search-summary-text h3:first-child {
+  margin-top: 0;
+}
+.ai-search-summary-text ul,
+.ai-search-summary-text ol {
+  margin: 0 0 8px;
+  padding-left: 20px;
+}
+.ai-search-summary-text li {
+  margin: 2px 0;
+}
+.ai-search-summary-text strong {
+  font-weight: 600;
+}
+.ai-search-summary-text em {
+  font-style: italic;
+}
+.ai-search-summary-text code {
+  padding: 1px 5px;
+  border-radius: 4px;
+  font-size: 13px;
+  font-family: var(--vp-font-family-mono, monospace);
+  background: var(--vp-c-bg-soft);
+}
+.ai-search-summary-text blockquote {
+  margin: 8px 0;
+  padding: 4px 12px;
+  border-left: 3px solid var(--vp-c-brand-2);
+  background: var(--vp-c-bg-soft);
+  border-radius: 0 6px 6px 0;
+  color: var(--vp-c-text-2);
+}
+.ai-search-summary-text blockquote p:last-child {
+  margin-bottom: 0;
+}
+.ai-search-summary-text a {
+  color: var(--vp-c-brand-1);
+  text-decoration: none;
+}
+.ai-search-summary-text a:hover {
+  text-decoration: underline;
 }
 
 /* 摘要来源链接 */

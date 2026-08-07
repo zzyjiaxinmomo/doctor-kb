@@ -85,7 +85,7 @@
                     </svg>
                     AI 回答
                   </div>
-                  <p class="ai-search-summary-text">{{ summary }}</p>
+                  <div class="ai-search-summary-text" v-html="renderedSummary"></div>
                   <div v-if="sources.length > 0" class="ai-search-summary-sources">
                     <span class="ai-search-summary-sources-label">来源：</span>
                     <a
@@ -137,8 +137,9 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted } from 'vue'
+import { ref, computed, onMounted, onUnmounted } from 'vue'
 import { withBase } from 'vitepress'
+import MarkdownIt from 'markdown-it'
 
 interface SearchResult {
   title: string
@@ -152,7 +153,7 @@ interface SearchResponse {
 }
 
 // 后端地址：生产环境 API
-const API_BASE = 'https://doctor-kb-server-production.up.railway.app'
+const API_BASE = 'http://127.0.0.1:8000'
 
 const visible = ref(false)
 const query = ref('')
@@ -167,6 +168,12 @@ const results = ref<SearchResult[]>([])
 const inputRef = ref<HTMLInputElement>()
 // 记录当前请求序号，避免慢的摘要请求覆盖新的搜索结果
 let searchSeq = 0
+
+// Markdown 渲染器(markdown-it,VitePress 同款)。
+// html:false → 不渲染原始 HTML 标签(先转义),保证 v-html 注入安全。
+// linkify:true → 自动把裸链接变成可点链接。
+const md = new MarkdownIt({ html: false, linkify: true })
+const renderedSummary = computed(() => md.render(summary.value || ''))
 
 const suggestions = [
   '系统怎么登录？',
@@ -249,44 +256,95 @@ async function fetchSummary(q: string, seq: number) {
   summary.value = ''
   sources.value = []
 
-  // 摘要生成较慢（最长约 30s），单独设较长超时
+  // /summarize 返回 SSE 流（text/event-stream），不能用 res.json()：
+  // 那会等整段 body 再 JSON.parse,长答案(30~45s)必然撞超时且 SSE 非合法 JSON。
+  // 这里用 ReadableStream 逐块读取、按 token 流式渲染。
   const controller = new AbortController()
-  const timer = setTimeout(() => controller.abort(), 45000)
+  // 空闲超时（非总时长）：只要持续有 token 进来就不过期，
+  // 仅在“长时间无新数据”时中断——天然适配流式，长答案不会被误杀。
+  let idleTimer: ReturnType<typeof setTimeout> | undefined
+  const resetIdle = () => {
+    if (idleTimer) clearTimeout(idleTimer)
+    idleTimer = setTimeout(() => controller.abort(), 30000)
+  }
+  resetIdle()
 
   try {
     const res = await fetch(`${API_BASE}/api/v1/summarize`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        query: q,
-        results: results.value.slice(0, 5).map((r) => ({
-          title: r.title,
-          content: r.content,
-          link: r.link
-        }))
-      }),
+      body: JSON.stringify({ query: q }),
       signal: controller.signal
     })
 
-    if (!res.ok) {
+    if (!res.ok || !res.body) {
       throw new Error(`服务异常（${res.status}）`)
     }
 
-    const data = await res.json()
-    // 校验序号：若期间用户已发起新搜索，则丢弃本次结果
-    if (seq !== searchSeq) return
-    summary.value = data.summary || ''
-    sources.value = data.sources || []
+    const reader = res.body.getReader()
+    const decoder = new TextDecoder('utf-8')
+    let buffer = ''
+    let gotText = false // 是否已收到至少一个 delta
+
+    while (true) {
+      const { done, value } = await reader.read()
+      if (done) break
+      resetIdle()
+      buffer += decoder.decode(value, { stream: true })
+      // SSE 事件以空行分隔
+      const events = buffer.split('\n\n')
+      buffer = events.pop() ?? ''
+      for (const evt of events) {
+        const line = evt.trim()
+        if (!line.startsWith('data:')) continue
+        const payload = line.slice(5).trim()
+        if (!payload) continue
+        let data: {
+          type?: string
+          text?: string
+          message?: string
+          sources?: { title: string; link: string }[]
+        }
+        try {
+          data = JSON.parse(payload)
+        } catch {
+          continue
+        }
+        // 期间用户发起了新搜索：丢弃本次，打断流
+        if (seq !== searchSeq) {
+          controller.abort()
+          return
+        }
+        if (data.type === 'delta' && data.text) {
+          if (!gotText) {
+            // 收到首个 token：切出骨架，进入流式渲染
+            summaryLoading.value = false
+            gotText = true
+          }
+          summary.value += data.text
+        } else if (data.type === 'done') {
+          sources.value = data.sources || []
+        } else if (data.type === 'error') {
+          // 仅在尚未产出任何文本时才报错；已有部分文本则保留给用户看
+          if (!gotText) {
+            summaryError.value = data.message || 'AI 回答生成失败'
+          }
+          return
+        }
+      }
+    }
   } catch (e: unknown) {
     if (seq !== searchSeq) return
     const msg = e instanceof Error ? e.message : String(e)
-    if (msg.includes('abort') || msg.includes('Abort')) {
-      summaryError.value = 'AI 回答生成超时'
-    } else {
-      summaryError.value = 'AI 回答生成失败'
+    // 已流式渲染出文字的，保留文字；否则才提示超时/失败
+    if (!summary.value) {
+      summaryError.value =
+        msg.includes('abort') || msg.includes('Abort')
+          ? 'AI 回答生成超时'
+          : 'AI 回答生成失败'
     }
   } finally {
-    clearTimeout(timer)
+    if (idleTimer) clearTimeout(idleTimer)
     if (seq === searchSeq) summaryLoading.value = false
   }
 }
