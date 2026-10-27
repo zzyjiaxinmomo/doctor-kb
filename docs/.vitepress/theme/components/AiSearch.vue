@@ -152,10 +152,10 @@ interface SearchResponse {
   results: SearchResult[]
 }
 
-// 后端地址：开发走本地，生产走 Cloudflare 隧道公网地址（访问者机器上没有后端，
+// 后端地址：开发走本地，生产走阿里云 kb 服务（访问者机器上没有后端，
 // 不能用 127.0.0.1）。需要临时覆盖时设置 VITE_AI_API_BASE。
 const API_BASE = import.meta.env.VITE_AI_API_BASE
-  ?? (import.meta.env.DEV ? 'http://127.0.0.1:8000' : 'https://kb.zzy-frontend.cn')
+  ?? (import.meta.env.DEV ? 'http://127.0.0.1:8000' : 'https://kb.clearbos.cn:8443')
 
 const visible = ref(false)
 const query = ref('')
