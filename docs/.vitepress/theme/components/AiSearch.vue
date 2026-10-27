@@ -175,6 +175,20 @@ let searchSeq = 0
 // html:false → 不渲染原始 HTML 标签(先转义),保证 v-html 注入安全。
 // linkify:true → 自动把裸链接变成可点链接。
 const md = new MarkdownIt({ html: false, linkify: true })
+
+// LLM 生成的摘要里带站内链接（/guide/xxx），站点部署在 /doctor-kb/ 子路径下，
+// 渲染时必须补上 base，否则线上点击会跳出子路径 404（外部 http 链接不受影响）
+const defaultLinkOpen =
+  md.renderer.rules.link_open ??
+  ((tokens, idx, options, _env, self) => self.renderToken(tokens, idx, options))
+md.renderer.rules.link_open = (tokens, idx, options, env, self) => {
+  const attrIndex = tokens[idx].attrIndex('href')
+  const href = attrIndex >= 0 ? tokens[idx].attrs?.[attrIndex][1] : ''
+  if (typeof href === 'string' && href.startsWith('/')) {
+    tokens[idx].attrs![attrIndex][1] = withBase(href)
+  }
+  return defaultLinkOpen(tokens, idx, options, env, self)
+}
 const renderedSummary = computed(() => md.render(summary.value || ''))
 
 const suggestions = [
